@@ -21,7 +21,10 @@ class App:
 
         self.hotkeyManager = hotkeyManager.HotkeyManager(self)
 
+        self.logger.log("GTA Online Toolkit v1.0 started!")
+        self.logger.log("Press ctrl+q to quit.")
         keyboard.wait('ctrl+q')
+        self.logger.log("Stopping...")
 
 if __name__ == "__main__":
     app = App()
