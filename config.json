@@ -1,0 +1,7 @@
+{
+    "gtavProcName": "GTA5.exe",
+    "keyHold": 0.05,
+    "keyWait": 0.1,
+    "phonePullWait": 0.6,
+    "sessionCleanTime": 10
+}

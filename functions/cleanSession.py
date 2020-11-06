@@ -1,6 +1,6 @@
 import psutil, time
 
-def execute(process):
-    process.suspend()
-    time.sleep(10)
-    process.resume()
+def execute(app):
+    app.process.suspend()
+    time.sleep(app.config['sessionCleanTime'])
+    app.process.resume()

@@ -1,16 +1,17 @@
 import time
 import psutil
 import keyboard
+import json
 
 import logger, hotkeyManager
 
 class App:
     def __init__(self):
+        self.config = json.load(open('config.json'))
         self.logger = logger.Logger(self)
         self.log = self.logger.log
 
-        self.processName = "GTA5.exe"
-        # self.processName = input()
+        self.processName = self.config['gtavProcName']
         self.process = None
         while not self.process:
             self.logger.log("Searching for GTA5.exe process...")

@@ -1,17 +1,17 @@
 from functions import directkeys
 import time
 
-def press(k):
+def press(app, k):
     if type(k) == int:
         directkeys.PressKey(k)
-        time.sleep(0.01)
+        time.sleep(app.config['keyHold'])
         directkeys.ReleaseKey(k)
     else:
         for j in k:
             directkeys.PressKey(j)
-            time.sleep(0.01)
+            time.sleep(app.config['keyHold'])
             directkeys.ReleaseKey(j)
-            time.sleep(0.05)
+            time.sleep(app.config['keyWait'])
 
 UP = 0xC8
 DOWN = 0xD0
